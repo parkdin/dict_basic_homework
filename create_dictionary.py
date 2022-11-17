@@ -7,8 +7,13 @@ def create_dictionary(key, value):
     Returns:
         dict: dictionary with keys and values
     """
-    dic = dict(zip(key, value))
-    return dic
-key = [1, 2, 3, 4, 5]
+    for k in key:
+        key_item = k
+        dic = dic.get(key_item)
+        for v in value:
+            value_item = v
+            dic = {key_item : value_item}
+        return dic
+key = [1, 2, 4, 4, 5]
 value = ["one", "two", "three", "four", "five"]
 print(create_dictionary(key, value))
