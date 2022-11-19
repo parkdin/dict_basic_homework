@@ -3,7 +3,6 @@ def last_item():
     Given a dictionary, Return last item value.
     """
     data = {'a': 1, 'b': 2}
-    for i in data.keys():
-        last = data[i]
-    return last
+    last_item = list(data.values())[-1]
+    return last_item
 print(last_item())
